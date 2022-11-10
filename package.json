@@ -10,23 +10,24 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/react-helmet": "^6.1.5",
+    "firebase": "^9.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.0",
+    "react-helmet-async": "^1.3.0",
+    "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
-    "typescript": "^4.4.2",
+    "styled-components": "^5.3.6",
+    "typescript": "*",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write ."
   },
   "browserslist": {
     "production": [
@@ -39,5 +40,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.10",
+    "prettier": "2.7.1"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/CodeByTarun/twitter-clone.git",
+  "author": "codebytarun <tarundeep1@hotmail.com>",
+  "license": "MIT"
 }
