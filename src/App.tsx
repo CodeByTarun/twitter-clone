@@ -2,12 +2,13 @@ import './App.css';
 import React from 'react';
 
 import { initializeApp } from 'firebase/app';
-import { ThemeProvider } from 'styled-components';
-import { lightTheme } from './Shared/theme';
+import styled, { ThemeProvider } from 'styled-components';
+import { darkTheme } from './Shared/theme';
 import NavigationBar from './Components/NavigationBar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import ExploreSideBar from './Components/ExploreSideBar';
+import GlobalStyle from './Shared/globalStyles';
 // import { Helmet } from 'react-helmet-async';
 // import { getFirestore } from 'firebase/firestore';
 // import { getAuth } from 'firebase/auth';
@@ -29,14 +30,28 @@ initializeApp({
 
 const App: React.FC<{}> = () => {
   return (
-      <ThemeProvider theme={ lightTheme }>
-        <NavigationBar/>
-        <Routes>
-          <Route path='/' element={<Home/>}/> 
-        </Routes>
-        <ExploreSideBar/>
+      <ThemeProvider theme={ darkTheme }>
+        <GlobalStyle/>
+        <MainDiv>
+          <NavigationBar/>
+          <Routes>
+            <Route path='/' element={<Home/>}/> 
+          </Routes>
+          <ExploreSideBar/>
+        </MainDiv>
       </ThemeProvider>
   );
 }
 
 export default App;
+
+const MainDiv = styled.div`
+  max-width: 1300px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+  background-color: yellow;
+  width: 100vw;
+  height: 100%;
+`
