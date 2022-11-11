@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -33,7 +33,7 @@ html {
 }
 body {
 	line-height: 1;
-	background-color: ${props => props.theme.colors.background};
+	background-color: ${(props) => props.theme.colors.background};
 	display: flex;
 	justify-content: center;
 }
@@ -54,7 +54,7 @@ table {
 }
 `;
 
-export default GlobalStyle; 
+export default GlobalStyle;
 
 // body {
 //   background-color: ${props => props.theme.colors.secondary};

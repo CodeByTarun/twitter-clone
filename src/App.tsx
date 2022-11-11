@@ -30,28 +30,28 @@ initializeApp({
 
 const App: React.FC<{}> = () => {
   return (
-      <ThemeProvider theme={ darkTheme }>
-        <GlobalStyle/>
-        <MainDiv>
-          <NavigationBar/>
-          <Routes>
-            <Route path='/' element={<Home/>}/> 
-          </Routes>
-          <ExploreSideBar/>
-        </MainDiv>
-      </ThemeProvider>
+    <ThemeProvider theme={darkTheme}>
+      <GlobalStyle />
+      <MainDiv>
+        <NavigationBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <ExploreSideBar />
+      </MainDiv>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
 
 const MainDiv = styled.div`
   max-width: 1300px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background-color: yellow;
   width: 100vw;
-  height: 100%;
-`
+  height: 100vh;
+`;

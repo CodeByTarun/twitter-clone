@@ -1,3 +1,3 @@
-import ExploreSideBar from "./ExploreSideBar";
+import ExploreSideBar from './ExploreSideBar';
 
 export default ExploreSideBar;
