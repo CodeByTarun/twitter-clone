@@ -9,6 +9,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import ExploreSideBar from './Components/ExploreSideBar';
 import GlobalStyle from './Shared/globalStyles';
+import Profile from './Pages/Profile';
+import Bookmarks from './Pages/Bookmarks';
 // import { Helmet } from 'react-helmet-async';
 // import { getFirestore } from 'firebase/firestore';
 // import { getAuth } from 'firebase/auth';
@@ -36,6 +38,8 @@ const App: React.FC<{}> = () => {
         <NavigationBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/bookmarks" element={<Bookmarks />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <ExploreSideBar />
       </MainDiv>

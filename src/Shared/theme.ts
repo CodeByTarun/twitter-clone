@@ -2,12 +2,12 @@ import { DefaultTheme } from 'styled-components';
 
 const lightTheme: DefaultTheme = {
   font: {
-    primary: 'black',
+    primary: '#000000',
     secondary: '#71767B',
   },
 
   colors: {
-    background: 'white',
+    background: '#FFFFFF',
     accent: '#1d9bf0',
     card: '#F7F9F9',
     search: '#EFF3F4',
@@ -27,7 +27,7 @@ const darkTheme: DefaultTheme = {
   },
 
   colors: {
-    background: 'black',
+    background: '#000000',
     accent: '#1d9bf0',
     card: '#16181C',
     search: '#202327',
