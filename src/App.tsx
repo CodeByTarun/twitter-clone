@@ -11,6 +11,7 @@ import ExploreSideBar from './Components/ExploreSideBar';
 import GlobalStyle from './Shared/globalStyles';
 import Profile from './Pages/Profile';
 import Bookmarks from './Pages/Bookmarks';
+import { devices } from './Shared/globalConstants';
 // import { Helmet } from 'react-helmet-async';
 // import { getFirestore } from 'firebase/firestore';
 // import { getAuth } from 'firebase/auth';
@@ -34,28 +35,38 @@ const App: React.FC<{}> = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <GlobalStyle />
-      <MainDiv>
+      <Container>
         <NavigationBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/bookmarks" element={<Bookmarks />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
         <ExploreSideBar />
-      </MainDiv>
+      </Container>
     </ThemeProvider>
   );
 };
 
 export default App;
 
-const MainDiv = styled.div`
-  max-width: 1300px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+const Container = styled.div`
+  display: grid;
   justify-content: center;
-  background-color: yellow;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  @media only screen and (${devices.tablet}) {
+    grid-template-columns: auto minmax(auto, 600px);
+    max-width: 705px;
+  }
+
+  @media only screen and (${devices.laptop}) {
+    grid-template-columns: auto 600px minmax(290px, 350px);
+  }
+
+  @media only screen and (${devices.desktop}) {
+    max-width: 1300px;
+  }
 `;

@@ -1,11 +1,17 @@
 import React from 'react';
-import { ExplorSideBarDiv } from './styled';
+import { useMediaQuery } from 'react-responsive';
+import { devices } from '../../Shared/globalConstants';
+import { ExploreSideBarDiv } from './styled';
 
 const ExploreSideBar: React.FC<{}> = () => {
+  const isLaptop = useMediaQuery({ query: devices.laptop });
+
+  if (!isLaptop) return null;
+
   return (
-    <ExplorSideBarDiv>
+    <ExploreSideBarDiv>
       <p>helifdasdf</p>
-    </ExplorSideBarDiv>
+    </ExploreSideBarDiv>
   );
 };
 

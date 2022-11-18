@@ -11,12 +11,11 @@ const lightTheme: DefaultTheme = {
     accent: '#1d9bf0',
     card: '#F7F9F9',
     search: '#EFF3F4',
-    border: 'black',
+    border: '#EFF3F4',
     reply: '#CFD9DE',
     cardHover: '#EFF1F1',
     navigationHover: '#E6E7E7',
   },
-
   borderRadius: '',
 };
 
