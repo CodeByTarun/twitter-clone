@@ -1,3 +1,3 @@
-import { Reply } from "./Reply";
+import { Reply } from './Reply';
 
 export default Reply;

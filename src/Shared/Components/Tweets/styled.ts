@@ -4,6 +4,7 @@ import { hexToRGB } from '../../../helpers/Converters';
 export const Container = styled.div`
   display: flex;
   padding: 1rem;
+  padding-bottom: 0;
   border-bottom-width: 0.5px;
   border-style: solid;
   border-color: ${(props) => props.theme.colors.border};
@@ -34,37 +35,69 @@ export const TweetHeader = styled.div`
 
 export const TweetText = styled.p``;
 
+export const ThreeDots = styled.div`
+  box-sizing: border-box;
+  height: 1.4rem;
+  width: 1.4rem;
+  padding: 0.2rem;
+  border-radius: 100px;
+
+  :hover {
+    background-color: ${(props) => hexToRGB(props.theme.font.primary, 0.1)};
+  }
+`;
+
+export const TweetOptionButton = styled.a<{ hoverColor: string }>`
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+  & p {
+    color: ${(props) => props.theme.font.secondary};
+    font-size: 0.8rem;
+    padding-left: 0.4rem;
+    font-weight: 600;
+    line-height: 1rem;
+    min-height: 1.2rem;
+  }
+
+  :hover {
+    & p {
+      color: ${(props) => props.hoverColor}
+    }
+  }
+`;
+
 export const TweetOptions = styled.div`
   display: flex;
-  padding-top: 1rem;
-  height: 1.2rem;
+  height: 2.2rem;
   max-width: 425px;
-  justify-content: space-between;
+  margin: 0.3rem 0;
+
+  & ${TweetOptionButton} {
+    flex: 1;
+  }
+
+   & ${TweetOptionButton}:nth-child(4) {
+    flex: 0;
+  }
 `;
 
-export const ThreeDots = styled.div`
-    box-sizing: border-box;
-    height: 1.4rem;
-    width: 1.4rem;
-    padding: 0.2rem;
-    border-radius: 100px;
 
-    :hover {
-        background-color: ${(props) => hexToRGB(props.theme.font.primary, 0.1)};
+export const IconContainer = styled.div<{hoverColor: string}>`
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  border-radius: 100px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  align-items: center;
+
+  ${TweetOptionButton}:hover && {
+    background-color: ${(props) => hexToRGB(props.hoverColor, 0.1)};
+
+    & path {
+      fill: ${(props) => props.hoverColor} !important;
     }
-`;
-
-export const TweetOptionButton = styled.a<{color: string}>`
-    display: flex;
-    height: 100%;
-
-    :hover {
-        & div {
-            border-radius: 100px;
-
-        }
-    }
-`
-
-export const IconContainer = styled.div`
+  }
 `

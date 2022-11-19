@@ -1,18 +1,20 @@
-import React from 'react'
-import { ShareIcon } from '../../../Icons'
-import SvgStyled from '../../../Styled/SvgStyled'
-import { TweetOptionButton } from '../styled'
+import React from 'react';
+import { useTheme } from 'styled-components';
+import { ShareIcon } from '../../../Icons';
+import SvgStyled from '../../../Styled/SvgStyled';
+import { IconContainer, TweetOptionButton } from '../styled';
 
-export const Share : React.FC<{}> = () => {
+export const Share: React.FC<{}> = () => {
 
+  const theme = useTheme();
 
   return (
-    <TweetOptionButton color={'white'}>
-        <div>
-            <SvgStyled color={'white'}>
-                <ShareIcon/>
-            </SvgStyled>
-        </div>
+    <TweetOptionButton hoverColor={theme.colors.accent}>
+      <IconContainer hoverColor={theme.colors.accent}>
+        <SvgStyled color={theme.font.secondary}>
+          <ShareIcon />
+        </SvgStyled>
+      </IconContainer>
     </TweetOptionButton>
-  )
-}
+  );
+};

@@ -9,7 +9,13 @@ import Like from './Like';
 import Reply from './Reply';
 import Retweet from './Retweet';
 import Share from './Share';
-import { Container, TweetBody, TweetHeader, TweetOptions, ThreeDots } from './styled';
+import {
+  Container,
+  TweetBody,
+  TweetHeader,
+  TweetOptions,
+  ThreeDots,
+} from './styled';
 
 export const Tweets: React.FC<{}> = () => {
   const theme = useTheme();
@@ -26,7 +32,7 @@ export const Tweets: React.FC<{}> = () => {
           <Spacer />
           <ThreeDots>
             <SvgStyled color={theme.font.primary}>
-                <ThreeDotsIcon/>
+              <ThreeDotsIcon />
             </SvgStyled>
           </ThreeDots>
         </TweetHeader>
@@ -38,10 +44,10 @@ export const Tweets: React.FC<{}> = () => {
         </p>
 
         <TweetOptions>
-            <Reply/>
-            <Retweet/>
-            <Like/>
-            <Share/>
+          <Reply />
+          <Retweet />
+          <Like />
+          <Share />
         </TweetOptions>
       </TweetBody>
     </Container>

@@ -1,3 +1,3 @@
-import { Retweet } from "./Retweet";
+import { Retweet } from './Retweet';
 
 export default Retweet;

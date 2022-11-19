@@ -63,7 +63,7 @@ const Container = styled.div`
   }
 
   @media only screen and (${devices.laptop}) {
-    grid-template-columns: auto 600px minmax(290px, 350px);
+    grid-template-columns: auto 600px minmax(330px, 390px);
   }
 
   @media only screen and (${devices.desktop}) {

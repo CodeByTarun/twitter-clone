@@ -23,3 +23,14 @@ export const Spacer = styled.div`
 export const LinkStyled = styled(Link)`
   text-decoration: none;
 `;
+
+export const HeaderText = styled.h1<{isBold: boolean}>`
+  font-size: 1.2rem;
+  color: ${(props) => props.theme.font.primary};
+  padding-right: 0.75rem;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+  font-weight: 700;
+`
