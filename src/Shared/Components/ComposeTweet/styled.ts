@@ -71,8 +71,8 @@ export const TweetButton = styled.button`
   border-width: 0;
   color: ${(props) => props.theme.font.primary};
   font-weight: 600;
-  font-size: 1.04rem;
-  height: 90%;
+  font-size: 0.9rem;
+  height: 80%;
   border-radius: 100px;
   box-sizing: border-box;
   display: block;

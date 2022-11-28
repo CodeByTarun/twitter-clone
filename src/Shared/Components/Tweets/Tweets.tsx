@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
+import { ProfilePhoto } from '..';
 import { ThreeDotsIcon } from '../../Icons';
 import { Spacer } from '../../Styled/MiscellaneousStyled';
 import SvgStyled from '../../Styled/SvgStyled';
-import { ProfileContainer } from '../ComposeTweet/styled';
-import ProfilePhoto from '../ProfilePhoto';
+import { Username } from '../Username';
 import Like from './Like';
 import Reply from './Reply';
 import Retweet from './Retweet';
@@ -22,13 +22,10 @@ export const Tweets: React.FC<{}> = () => {
 
   return (
     <Container>
-      <ProfileContainer>
-        <ProfilePhoto />
-      </ProfileContainer>
+      <ProfilePhoto />
       <TweetBody>
         <TweetHeader>
-          <span>CodeByTarun</span>
-          <span> @CodeByTarun &#183; 5h</span>
+          <Username secondaryText={'@CodeByTarun'}/>
           <Spacer />
           <ThreeDots>
             <SvgStyled color={theme.font.primary}>

@@ -25,6 +25,7 @@ const NavigationBar: React.FC<{}> = () => {
   const theme = useTheme();
 
   const isDesktop = useMediaQuery({ query: devices.desktop });
+  const isLaptop = useMediaQuery({ query: devices.laptop});
 
   return (
     <NavigationDiv>
@@ -46,7 +47,7 @@ const NavigationBar: React.FC<{}> = () => {
       </LinkStyled>
       <NavigationButton
         text={'Explore'}
-        icon={isDesktop ? <ExploreIcon /> : <SearchIcon />}
+        icon={isLaptop ? <ExploreIcon /> : <SearchIcon />}
         hoverColor={theme.font.primary}
         iconColor={theme.font.primary}
       />

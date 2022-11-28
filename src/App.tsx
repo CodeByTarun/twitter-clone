@@ -1,17 +1,13 @@
 import './App.css';
 import React from 'react';
-
 import { initializeApp } from 'firebase/app';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from './Shared/theme';
-import NavigationBar from './Components/NavigationBar';
 import { Route, Routes } from 'react-router-dom';
-import Home from './Pages/Home';
-import ExploreSideBar from './Components/ExploreSideBar';
 import GlobalStyle from './Shared/globalStyles';
-import Profile from './Pages/Profile';
-import Bookmarks from './Pages/Bookmarks';
 import { devices } from './Shared/globalConstants';
+import { Home, Bookmarks, Profile } from './Pages';
+import { ExploreSideBar, NavigationBar } from './Components';
 // import { Helmet } from 'react-helmet-async';
 // import { getFirestore } from 'firebase/firestore';
 // import { getAuth } from 'firebase/auth';
@@ -63,7 +59,7 @@ const Container = styled.div`
   }
 
   @media only screen and (${devices.laptop}) {
-    grid-template-columns: auto 600px minmax(330px, 390px);
+    grid-template-columns: auto 600px minmax(1.25rem, 1.75rem) minmax(290px, 350px);
   }
 
   @media only screen and (${devices.desktop}) {

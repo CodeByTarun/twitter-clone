@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { AccentText, HeaderText } from '../../Shared/Styled/MiscellaneousStyled';
 
 export const ExploreSideBarDiv = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  padding: 0.5rem 1rem 0.5rem 2rem;
+  padding: 0.25rem 0;
+  grid-column: 4;
 `;
 
 export const SearchBar = styled.div`
@@ -57,9 +58,38 @@ export const SearchInput = styled.input`
 `;
 
 export const Widget = styled.div`
+  width: inherit;
+  display: flex;
+  flex-direction: column;
   background-color: ${p => p.theme.colors.card};
   margin-top: 1rem;
-  border-radius: 15px;
-  padding: 1rem;
-  color: ${p => p.theme.font.primary}
+  border-radius: ${p => p.theme.borderRadius};
+  color: ${p => p.theme.font.primary};
+
+  ${AccentText} {
+    padding: 1rem;
+    border-bottom-left-radius: ${p => p.theme.borderRadius};
+    border-bottom-right-radius: ${p => p.theme.borderRadius};
+    user-select: none;
+
+    :hover {
+      background-color: ${p => p.theme.colors.cardHover};
+    }
+  }
 `;
+
+export const WidgetItem = styled.div`
+  width: inherit;
+  padding: 0.6rem 1rem;
+  :hover {
+    background-color: ${p => p.theme.colors.cardHover};
+  }
+
+`;
+
+export const WidgetHeaderText = styled(HeaderText)`
+padding: 1rem;
+`
+
+
+

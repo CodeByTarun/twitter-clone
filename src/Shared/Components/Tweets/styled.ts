@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { hexToRGB } from '../../../helpers/Converters';
+import { StatText } from '../../Styled/MiscellaneousStyled';
 
 export const Container = styled.div`
   display: flex;
@@ -52,19 +53,14 @@ export const TweetOptionButton = styled.a<{ hoverColor: string }>`
   height: 100%;
   align-items: center;
 
-  & p {
-    color: ${(props) => props.theme.font.secondary};
-    font-size: 0.8rem;
-    padding-left: 0.4rem;
-    font-weight: 600;
-    line-height: 1rem;
-    min-height: 1.2rem;
-  }
-
   :hover {
-    & p {
+    & ${StatText} {
       color: ${(props) => props.hoverColor}
     }
+  }
+  
+  & ${StatText} {
+    padding-left: 0.4rem;
   }
 `;
 

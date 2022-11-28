@@ -1,9 +1,15 @@
 import React, { ReactElement } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import styled from 'styled-components';
 import { devices } from '../../../Shared/globalConstants';
-import { IconButton } from '../../../Shared/Styled/ButtonWrappers';
+import { HeaderText, IconButton } from '../../../Shared/Styled/MiscellaneousStyled';
 import SvgStyled from '../../../Shared/Styled/SvgStyled';
 import { NavigationOptionDiv } from '../styled';
+
+const NavigationHeaderText = styled(HeaderText)`
+  padding-left: 1.25rem;
+  padding-right: 1rem;
+`
 
 interface NavigationButtonProps {
   text: string;
@@ -22,9 +28,9 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
 
   return (
     <NavigationOptionDiv>
-      <IconButton hoverColor={hoverColor}>
+      <IconButton hoverColor={hoverColor} padding={'0.75rem'}>
         <SvgStyled color={iconColor}>{icon}</SvgStyled>
-        {text !== '' && isDesktop && <p>{text}</p>}
+        {text !== '' && isDesktop && <NavigationHeaderText isBold={false}>{text}</NavigationHeaderText>}
       </IconButton>
     </NavigationOptionDiv>
   );

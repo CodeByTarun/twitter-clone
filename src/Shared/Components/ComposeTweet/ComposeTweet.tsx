@@ -1,14 +1,12 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { useTheme } from 'styled-components';
-import ProfilePhoto from '../ProfilePhoto';
+import { ProfilePhoto } from '..';
 import { GifIcon, ImageIcon } from '../../Icons';
-import { IconButton } from '../../Styled/ButtonWrappers';
-import { Spacer } from '../../Styled/MiscellaneousStyled';
+import { IconButton, Spacer } from '../../Styled/MiscellaneousStyled';
 import SvgStyled from '../../Styled/SvgStyled';
 import {
   AttachmentOptions,
   Container,
-  ProfileContainer,
   Row,
   TweetBox,
   TweetButton,
@@ -41,9 +39,7 @@ export const ComposeTweet: React.FC<{}> = () => {
 
   return (
     <Container>
-      <ProfileContainer>
-        <ProfilePhoto />
-      </ProfileContainer>
+      <ProfilePhoto />
       <TweetBox>
         <TweetInput
           maxLength={300}
@@ -69,8 +65,6 @@ export const ComposeTweet: React.FC<{}> = () => {
           <TweetButton disabled={tweet === ''}>Tweet</TweetButton>
         </Row>
       </TweetBox>
-      {/* options for adding image or gif */}
-      {/* tweet button */}
     </Container>
   );
 };

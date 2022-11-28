@@ -16,7 +16,7 @@ const lightTheme: DefaultTheme = {
     cardHover: '#EFF1F1',
     navigationHover: '#E6E7E7',
   },
-  borderRadius: '',
+  borderRadius: '15px',
 };
 
 const darkTheme: DefaultTheme = {
@@ -35,7 +35,7 @@ const darkTheme: DefaultTheme = {
     cardHover: '#1D1F23',
     navigationHover: '#181818',
   },
-  borderRadius: '',
+  borderRadius: '15px',
 };
 
 export { lightTheme, darkTheme };
