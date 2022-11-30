@@ -32,6 +32,13 @@ export const LinkStyled = styled(Link)`
 
 // FONTS
 
+export const Text = styled.p<{isBold? : boolean}>`
+  color: ${(props) => props.theme.font.primary};
+  line-height: 0.95rem;
+  min-height: 1.1rem;
+  font-weight: ${p => (p.isBold != null) ? 'bold' : 400};
+  font-size: 0.9375em;
+`
 export const HeaderText = styled.p<{isBold: boolean}>`
   font-size: 1.2rem;
   color: ${(props) => props.theme.font.primary};
@@ -43,12 +50,7 @@ export const HeaderText = styled.p<{isBold: boolean}>`
   font-weight: ${ p => p.isBold ? 700 : 400 };
 `
 
-export const Text = styled.p<{isBold : boolean}>`
-  color: ${(props) => props.theme.font.primary};
-  line-height: 0.95rem;
-  min-height: 1.1rem;
-  font-weight: ${p => p.isBold ? 'bold' : 400};
-`
+
 export const SecondaryText = styled(Text)`
   color: ${(props) => props.theme.font.secondary};
 `

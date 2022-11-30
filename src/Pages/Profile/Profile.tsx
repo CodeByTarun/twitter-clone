@@ -23,7 +23,7 @@ const Profile: React.FC<{}> = () => {
         <Username isRow={false} secondaryText={'3,27773 Tweets'} isHeader={true}/>
       </HeaderDiv>
       <ProfileHeader/>
-
+ 
     </PageViewDiv>
   );
 };
