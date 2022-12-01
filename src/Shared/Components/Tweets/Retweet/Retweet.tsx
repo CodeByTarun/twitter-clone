@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
 import { RetweetIcon } from '../../../Icons';
-import { StatText } from '../../../Styled/MiscellaneousStyled';
+import { SmallText } from '../../../Styled/MiscellaneousStyled';
 import SvgStyled from '../../../Styled/SvgStyled';
 import { IconContainer, TweetOptionButton } from '../styled';
 
@@ -18,7 +18,7 @@ export const Retweet: React.FC<{}> = () => {
           <RetweetIcon />
         </SvgStyled>
       </IconContainer>
-      <StatText>33</StatText>
+      <SmallText>33</SmallText>
     </TweetOptionButton>
   );
 };

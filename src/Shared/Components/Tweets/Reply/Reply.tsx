@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
 import { ReplyIcon } from '../../../Icons';
-import { StatText } from '../../../Styled/MiscellaneousStyled';
+import { SmallText } from '../../../Styled/MiscellaneousStyled';
 import SvgStyled from '../../../Styled/SvgStyled';
 import { IconContainer, TweetOptionButton } from '../styled';
 
@@ -15,7 +15,7 @@ export const Reply: React.FC<{}> = () => {
           <ReplyIcon />
         </SvgStyled>
       </IconContainer>
-      <StatText>234</StatText>
+      <SmallText>234</SmallText>
     </TweetOptionButton>
   );
 };

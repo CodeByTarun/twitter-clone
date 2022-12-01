@@ -30,7 +30,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
     <NavigationOptionDiv>
       <IconButton hoverColor={hoverColor} padding={'0.75rem'}>
         <SvgStyled color={iconColor}>{icon}</SvgStyled>
-        {text !== '' && isDesktop && <NavigationHeaderText isBold={false}>{text}</NavigationHeaderText>}
+        {text !== '' && isDesktop && <NavigationHeaderText>{text}</NavigationHeaderText>}
       </IconButton>
     </NavigationOptionDiv>
   );

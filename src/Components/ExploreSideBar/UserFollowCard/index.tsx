@@ -6,13 +6,13 @@ import { UserFollowItem } from './UserFollowItem';
 const UserFollowCard : React.FC<{}> = () => {
   return (
     <Widget>
-      <WidgetHeaderText isBold={true}>
+      <WidgetHeaderText isBold>
         Who to follow
       </WidgetHeaderText>
       <UserFollowItem/>
       <UserFollowItem/>
       <UserFollowItem/>
-      <AccentText isBold={false}>
+      <AccentText>
         Show more
       </AccentText>
     </Widget>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { hexToRGB } from '../../../helpers/Converters';
-import { StatText } from '../../Styled/MiscellaneousStyled';
+import { SecondaryText } from '../../Styled/MiscellaneousStyled';
 
 export const Container = styled.div`
   display: flex;
@@ -54,12 +54,12 @@ export const TweetOptionButton = styled.a<{ hoverColor: string }>`
   align-items: center;
 
   :hover {
-    & ${StatText} {
+    & ${SecondaryText} {
       color: ${(props) => props.hoverColor}
     }
   }
   
-  & ${StatText} {
+  & ${SecondaryText} {
     padding-left: 0.4rem;
   }
 `;

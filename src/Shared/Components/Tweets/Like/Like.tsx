@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
 import { LikeIcon } from '../../../Icons';
-import { StatText } from '../../../Styled/MiscellaneousStyled';
+import { SmallText } from '../../../Styled/MiscellaneousStyled';
 import SvgStyled from '../../../Styled/SvgStyled';
 import { IconContainer, TweetOptionButton } from '../styled';
 
@@ -18,7 +18,7 @@ export const Like: React.FC<{}> = () => {
           <LikeIcon />
         </SvgStyled>
       </IconContainer>
-      <StatText>53</StatText>
+      <SmallText>53</SmallText>
     </TweetOptionButton>
   );
 };

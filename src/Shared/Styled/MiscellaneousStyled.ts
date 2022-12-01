@@ -31,25 +31,21 @@ export const LinkStyled = styled(Link)`
 `;
 
 // FONTS
+// font sizes: 
+// normal: 15px DONE
+// header: 20px DONE
+// small text: 13px DONE
+// THESE ARE COMPONENT SPECIFIC:
+// tweet button: 17px
+// follow button: 14px 
 
-export const Text = styled.p<{isBold? : boolean}>`
+export const Text = styled.span<{isBold? : boolean}>`
   color: ${(props) => props.theme.font.primary};
-  line-height: 0.95rem;
-  min-height: 1.1rem;
+  /* line-height: 0.95rem;
+  min-height: 1.1rem; */
   font-weight: ${p => (p.isBold != null) ? 'bold' : 400};
   font-size: 0.9375em;
 `
-export const HeaderText = styled.p<{isBold: boolean}>`
-  font-size: 1.2rem;
-  color: ${(props) => props.theme.font.primary};
-  padding-right: 0.75rem;
-  -webkit-user-select: none; /* Chrome all / Safari all */
-  -moz-user-select: none; /* Firefox all */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none;
-  font-weight: ${ p => p.isBold ? 700 : 400 };
-`
-
 
 export const SecondaryText = styled(Text)`
   color: ${(props) => props.theme.font.secondary};
@@ -59,15 +55,14 @@ export const AccentText = styled(Text)`
   color: ${p => p.theme.colors.accent};
 `;
 
-export const TweetText = styled.p`
+export const HeaderText = styled(Text)`
+  font-size: 1.25em;
+  font-weight: ${ p =>  (p.isBold != null) ? 700 : 400 };
 `
 
-export const StatText = styled.p`
-  color: ${(props) => props.theme.font.secondary};
-  font-size: 0.8rem;
-  font-weight: 600;
-  line-height: 1rem;
-  min-height: 1.2rem;
+export const SmallText = styled(SecondaryText)`
+  font-size: 0.8125em;
+  font-weight: ${ p =>  (p.isBold != null) ? 600 : 400 };
 `
 
 // Buttons

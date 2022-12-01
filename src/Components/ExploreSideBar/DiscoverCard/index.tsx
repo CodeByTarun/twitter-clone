@@ -6,14 +6,14 @@ import DiscoverItem from './DiscoverItem'
 export const DiscoverCard : React.FC<{}> = () => {
   return (
     <Widget>
-        <WidgetHeaderText isBold={true}>
+        <WidgetHeaderText isBold>
             What&apos;s happening
         </WidgetHeaderText>
         <DiscoverItem/>
         <DiscoverItem/>
         <DiscoverItem/>
         <DiscoverItem/>
-        <AccentText isBold={false}>Show more</AccentText>
+        <AccentText>Show more</AccentText>
     </Widget>
   )
 }

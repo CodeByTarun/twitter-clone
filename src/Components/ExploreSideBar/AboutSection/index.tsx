@@ -25,8 +25,8 @@ const AboutContainer = styled.div`
 export const AboutSection : React.FC<{}> = () => {
   return (
     <AboutContainer>
-        {AboutItems.map(item => <SecondaryText key={item} isBold={false}>{item}</SecondaryText>)}
-        <SecondaryText isBold={false}>© 2022 Twitter, Inc.</SecondaryText>
+        {AboutItems.map(item => <SecondaryText key={item}>{item}</SecondaryText>)}
+        <SecondaryText>© 2022 Twitter, Inc.</SecondaryText>
     </AboutContainer>
   )
 }
