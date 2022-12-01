@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
-import { ComposeTweet, Tweets } from '../../Shared/Components';
+import { ComposeTweet, Tweet } from '../../Shared/Components';
 import { TopTweetsIcon } from '../../Shared/Icons';
 import { HeaderText, IconButton, Spacer } from '../../Shared/Styled/MiscellaneousStyled';
 import {
@@ -26,13 +26,13 @@ const Home: React.FC<{}> = () => {
       </HeaderDiv>
       <ComposeTweet />
       {/* Feed */}
-      <Tweets />
-      <Tweets />
-      <Tweets />
-      <Tweets />
-      <Tweets />
-      <Tweets />
-      <Tweets />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
     </PageViewDiv>
   );
 };

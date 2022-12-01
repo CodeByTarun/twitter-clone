@@ -22,29 +22,29 @@ export const TweetHeader = styled.div`
   display: flex;
   margin-bottom: 0.25rem;
   align-items: center;
+  position: relative;
 
-  & span {
-    line-height: 0.95rem;
-    min-height: 1.1rem;
-  }
-
-  & span:nth-of-type(2) {
-    white-space: pre;
-    color: ${(props) => props.theme.font.secondary};
+  ${SecondaryText} {
+    padding-left: 0.3rem;
   }
 `;
 
-export const TweetText = styled.p``;
-
 export const ThreeDots = styled.div`
   box-sizing: border-box;
-  height: 1.4rem;
-  width: 1.4rem;
-  padding: 0.2rem;
+  height: 2rem;
+  width: 2rem;
+  padding: 0.4rem;
   border-radius: 100px;
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
 
   :hover {
-    background-color: ${(props) => hexToRGB(props.theme.font.primary, 0.1)};
+    background-color: ${(props) => hexToRGB(props.theme.colors.accent, 0.1)};
+
+    & path {
+      fill: ${(props) => props.theme.colors.accent} !important;
+    }
   }
 `;
 

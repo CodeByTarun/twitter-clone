@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ProfilePhoto } from '../../../../Shared/Components'
-import { Username } from '../../../../Shared/Components/Username'
+import { SecondaryText, Text } from '../../../../Shared/Styled/MiscellaneousStyled'
 import { WidgetItem } from '../../styled'
 
 const WidgetItemRow = styled(WidgetItem)`
@@ -10,9 +10,23 @@ const WidgetItemRow = styled(WidgetItem)`
 `
 
 const UsernameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  padding: 0 1rem;
+  padding: 0 0.8rem;
+  justify-content: center;
   box-sizing: border-box;
+  overflow: hidden;
+
+  ${Text}, ${SecondaryText} {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  };
+
+  ${Text} {
+    padding-bottom: 0.3rem;
+  };
 `
 
 const FollowButton = styled.button`
@@ -24,19 +38,18 @@ const FollowButton = styled.button`
   font-weight: 600;
 `;
 
-export const UserFollowItem : React.FC<{}> = () => {
-  return (
-    <WidgetItemRow>
-      <ProfilePhoto/>
-      <UsernameContainer>
-        <Username isRow={false} secondaryText={'@CodeByTarun'}/>
-      </UsernameContainer>
-      <FollowButton>
-        Follow
-      </FollowButton>
-    </WidgetItemRow>
-  )
-}
+export const UserFollowItem : React.FC<{}> = () => (
+  <WidgetItemRow>
+    <ProfilePhoto />
+    <UsernameContainer>
+      <Text isBold>CodeByTarun</Text>
+      <SecondaryText as='a'>@CodeByTarundsfdfsdfsdffdsfsfsdfsdfddfsdfdssffdsfsfdsfsd</SecondaryText>
+    </UsernameContainer>
+    <FollowButton>
+      Follow
+    </FollowButton>
+  </WidgetItemRow>
+)
 
 
 // 80

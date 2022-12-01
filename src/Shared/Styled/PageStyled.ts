@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { IconButton } from './MiscellaneousStyled';
+import { HeaderText, IconButton, SmallText } from './MiscellaneousStyled';
 
 export const PageViewDiv = styled.div`
   box-sizing: border-box;
@@ -25,4 +25,24 @@ export const HeaderDiv = styled.div`
     height: 65%;
   }
 `;
+
+export const HeaderTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 0.8rem;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  ${HeaderText}, ${SmallText} {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  };
+
+  ${HeaderText} {
+    padding-bottom: 0.3rem;
+  };
+`
 

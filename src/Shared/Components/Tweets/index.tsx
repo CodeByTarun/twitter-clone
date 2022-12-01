@@ -2,22 +2,21 @@ import React from 'react';
 import { useTheme } from 'styled-components';
 import { ProfilePhoto } from '..';
 import { ThreeDotsIcon } from '../../Icons';
-import { Spacer } from '../../Styled/MiscellaneousStyled';
+import { SecondaryText, Spacer, Text } from '../../Styled/MiscellaneousStyled';
 import SvgStyled from '../../Styled/SvgStyled';
-import { Username } from '../Username';
 import Like from './Like';
 import Reply from './Reply';
 import Retweet from './Retweet';
 import Share from './Share';
 import {
   Container,
+  ThreeDots,
   TweetBody,
   TweetHeader,
   TweetOptions,
-  ThreeDots,
 } from './styled';
 
-export const Tweets: React.FC<{}> = () => {
+export const Tweet: React.FC<{}> = () => {
   const theme = useTheme();
 
   return (
@@ -25,7 +24,8 @@ export const Tweets: React.FC<{}> = () => {
       <ProfilePhoto />
       <TweetBody>
         <TweetHeader>
-          <Username secondaryText={'@CodeByTarun'}/>
+          <Text isBold>CodeByTarun</Text>
+          <SecondaryText>@CodeByTarun</SecondaryText>
           <Spacer />
           <ThreeDots>
             <SvgStyled color={theme.font.primary}>

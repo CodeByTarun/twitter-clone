@@ -68,6 +68,7 @@ export const Widget = styled.div`
 
   ${AccentText} {
     padding: 1rem;
+    padding-bottom: 1.2rem;
     border-bottom-left-radius: ${p => p.theme.borderRadius};
     border-bottom-right-radius: ${p => p.theme.borderRadius};
     user-select: none;
