@@ -35,6 +35,7 @@ const NavigationBar: React.FC<{}> = () => {
           icon={<TwitterIcon />}
           hoverColor={theme.colors.accent}
           iconColor={theme.colors.accent}
+          padding={'0.7rem'}
         />
       </LinkStyled>
       <LinkStyled to={'/home'}>

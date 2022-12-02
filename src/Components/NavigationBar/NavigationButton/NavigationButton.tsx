@@ -9,6 +9,7 @@ import { NavigationOptionDiv } from '../styled';
 const NavigationHeaderText = styled(HeaderText)`
   padding-left: 1.25rem;
   padding-right: 1rem;
+  font-size: 1.25em;
 `
 
 interface NavigationButtonProps {
@@ -16,6 +17,7 @@ interface NavigationButtonProps {
   icon: ReactElement;
   hoverColor: string;
   iconColor: string;
+  padding?: string;
 }
 
 const NavigationButton: React.FC<NavigationButtonProps> = ({
@@ -23,12 +25,13 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
   icon,
   hoverColor,
   iconColor,
+  padding = '0.8rem',
 }) => {
   const isDesktop = useMediaQuery({ query: devices.desktop });
 
   return (
     <NavigationOptionDiv>
-      <IconButton hoverColor={hoverColor} padding={'0.75rem'}>
+      <IconButton hoverColor={hoverColor} padding={padding}>
         <SvgStyled color={iconColor}>{icon}</SvgStyled>
         {text !== '' && isDesktop && <NavigationHeaderText>{text}</NavigationHeaderText>}
       </IconButton>

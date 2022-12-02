@@ -30,6 +30,11 @@ export const LinkStyled = styled(Link)`
   text-decoration: none;
 `;
 
+export const FlexContainer = styled.div<{isVeritcal?: boolean}>`
+  display: flex;
+  ${p => (p.isVeritcal !== null) && 'flex-direction: column;'};
+`
+
 // FONTS
 // font sizes: 
 // normal: 15px DONE
@@ -41,10 +46,9 @@ export const LinkStyled = styled(Link)`
 
 export const Text = styled.span<{isBold? : boolean}>`
   color: ${(props) => props.theme.font.primary};
-  /* line-height: 0.95rem;
-  min-height: 1.1rem; */
-  font-weight: ${p => (p.isBold != null) ? 'bold' : 400};
+  ${p => (p.isBold != null) ? 'font-weight: bold' : 'font-weight: normal'};
   font-size: 0.9375em;
+  line-height: 1.15rem;
 `
 
 export const SecondaryText = styled(Text)`
@@ -57,12 +61,10 @@ export const AccentText = styled(Text)`
 
 export const HeaderText = styled(Text)`
   font-size: 1.25em;
-  font-weight: ${ p =>  (p.isBold != null) ? 700 : 400 };
 `
 
 export const SmallText = styled(SecondaryText)`
   font-size: 0.8125em;
-  font-weight: ${ p =>  (p.isBold != null) ? 600 : 400 };
 `
 
 // Buttons
@@ -70,6 +72,7 @@ export const IconButton = styled.button<{ hoverColor: string, padding?: string }
   display: flex;
   align-items: center;
   background-color: transparent;
+  font: inherit;
   border-style: none;
   border-radius: 100px;
   height: 100%;
@@ -78,4 +81,12 @@ export const IconButton = styled.button<{ hoverColor: string, padding?: string }
   :hover {
     background-color: ${(props) => hexToRGB(props.hoverColor, 0.1)};
   }
+`
+
+export const Button = styled.button`
+  min-width: 80px;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font: inherit;
+  font-weight: bold;
 `

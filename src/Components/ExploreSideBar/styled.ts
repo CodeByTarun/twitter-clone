@@ -90,6 +90,7 @@ export const WidgetItem = styled.div`
 
 export const WidgetHeaderText = styled(HeaderText)`
 padding: 1rem;
+font-weight: 900;
 `
 
 

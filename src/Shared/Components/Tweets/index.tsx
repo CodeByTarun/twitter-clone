@@ -34,11 +34,11 @@ export const Tweet: React.FC<{}> = () => {
           </ThreeDots>
         </TweetHeader>
 
-        <p>
+        <Text>
           LOREM DSOFSDFSL L:DFJS:F SDDF:SLJ FSDLOREM DSOFSDFSL L:DFJS:F SDDF:SLJ
           FSDLOREM DSOFSDFSL L:DFJS:F SDDF:SLJ FSDLOREM DSOFSDFSL L:DFJS:F
           SDDF:SLJ FSDLOREM DSOFSDFSL L:DFJS:F SDDF:SLJ FSD
-        </p>
+        </Text>
 
         <TweetOptions>
           <Reply />

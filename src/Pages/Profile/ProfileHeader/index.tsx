@@ -1,15 +1,33 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const ProfileHeaderContainer = styled.div`
-    
-`
+import { ProfilePhoto } from '../../../Shared/Components'
+import { FlexContainer, HeaderText, SecondaryText, Text } from '../../../Shared/Styled/MiscellaneousStyled'
+import { DescriptionText, EditProfileButton, FollowContainer, HeaderPhotoContainer, LocationAndLinksContainer, ProfileAndEditContainer, ProfileContainer } from './styled'
 
 export const ProfileHeader: React.FC<{}> = () => {
     return (
-        <ProfileHeaderContainer>
+        <FlexContainer isVeritcal>
+            <HeaderPhotoContainer/>
+            <ProfileContainer>
+                <ProfileAndEditContainer>
+                    <ProfilePhoto/>
+                    <EditProfileButton>
+                        <Text isBold>Edit profile</Text>
+                    </EditProfileButton>
+                </ProfileAndEditContainer>
+                <HeaderText isBold>CodeByTarun</HeaderText>
+                <SecondaryText>@CodeByTarun</SecondaryText>
+                <DescriptionText>Description</DescriptionText>
+                <LocationAndLinksContainer>
+                    <SecondaryText>Location</SecondaryText>
+                    <SecondaryText>Links</SecondaryText>
+                </LocationAndLinksContainer>
 
-        </ProfileHeaderContainer>
+                <FollowContainer>
+                    <SecondaryText><b>55</b> Following</SecondaryText>
+                    <SecondaryText><b>0</b> Followers</SecondaryText>
+                </FollowContainer>
+            </ProfileContainer>
+        </FlexContainer>
     )
 }
 

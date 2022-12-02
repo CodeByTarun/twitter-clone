@@ -17,18 +17,20 @@ export const TweetBox = styled.div`
   flex-direction: column;
 `;
 
-export const TweetInput = styled.textarea`
+export const TweetInput = styled.textarea<{hasText?: boolean}>`
   border-width: 0;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   resize: none;
   padding-bottom: 0.5rem;
   background-color: transparent;
   color: ${(props) => props.theme.font.primary};
-  font-size: 1.2rem;
+  ${p =>  (p.hasText ?? false) && `border-bottom: 1px solid ${p.theme.colors.border}`};
+  font: inherit;
+  font-size: 1.25em;
   margin-left: 1rem;
 
   :focus {
     outline: 0;
+    border-bottom: 1px solid ${(props) => props.theme.colors.border};
   }
 
   ::placeholder {

@@ -46,6 +46,7 @@ export const ComposeTweet: React.FC<{}> = () => {
           ref={textareaRef}
           placeholder="What's happening?"
           onChange={handleTweetChange}
+          hasText={tweet.length > 0}
         />
         <Row>
           <AttachmentOptions>

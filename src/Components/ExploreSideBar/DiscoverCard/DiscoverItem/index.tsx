@@ -7,7 +7,7 @@ const DiscoverItemContainer = styled(WidgetItem)`
   display: flex;
   flex-direction: column;
   & ${Text} {
-    padding: 0.2rem 0;
+    padding: 0.1rem 0;
   }
 `;
 

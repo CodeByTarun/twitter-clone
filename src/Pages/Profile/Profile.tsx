@@ -25,7 +25,7 @@ const Profile: React.FC<{}> = () => {
         </HeaderTextContainer>
       </HeaderDiv>
       <ProfileHeader/>
- 
+      
     </PageViewDiv>
   );
 };
