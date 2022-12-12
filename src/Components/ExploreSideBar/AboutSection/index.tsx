@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import { SecondaryText } from '../../../Shared/Styled/MiscellaneousStyled';
+import { SmallText } from '../../../Shared/Styled/MiscellaneousStyled';
 
 const AboutContainer = styled.div`
     display: flex;
@@ -8,25 +8,24 @@ const AboutContainer = styled.div`
     width: 100%;
     padding: 1rem;
 
-    ${SecondaryText}:nth-child(-n+6) {
+    ${SmallText}:nth-child(-n+6) {
         :hover {
             text-decoration: underline;
         }
     }
 
-    ${SecondaryText} {
+    ${SmallText} {
         padding-right: 0.75rem;
-        font-size: 0.85rem;
         padding-bottom: 0.25rem;
         user-select: none;
     }
 `
-
+ 
 export const AboutSection : React.FC<{}> = () => {
   return (
     <AboutContainer>
-        {AboutItems.map(item => <SecondaryText key={item}>{item}</SecondaryText>)}
-        <SecondaryText>© 2022 Twitter, Inc.</SecondaryText>
+        {AboutItems.map(item => <SmallText key={item}>{item}</SmallText>)}
+        <SmallText>© 2022 Twitter, Inc.</SmallText>
     </AboutContainer>
   )
 }

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { hexToRGB } from '../../helpers/Converters';
+import { fontSizes } from '../globalConstants';
 
 export const ImgFitter = styled.div<{ imageSource: string }>`
   background-image: url(${(props) => props.imageSource});
@@ -30,9 +31,9 @@ export const LinkStyled = styled(Link)`
   text-decoration: none;
 `;
 
-export const FlexContainer = styled.div<{isVeritcal?: boolean}>`
+export const FlexContainer = styled.div<{isVertical: boolean}>`
   display: flex;
-  ${p => (p.isVeritcal !== null) && 'flex-direction: column;'};
+  ${p => (p.isVertical) ? 'flex-direction: column;' : 'flex-direction: row;'};
 `
 
 // FONTS
@@ -47,7 +48,7 @@ export const FlexContainer = styled.div<{isVeritcal?: boolean}>`
 export const Text = styled.span<{isBold? : boolean}>`
   color: ${(props) => props.theme.font.primary};
   ${p => (p.isBold != null) ? 'font-weight: bold' : 'font-weight: normal'};
-  font-size: 0.9375em;
+  font-size: ${fontSizes.normal};
   line-height: 1.15rem;
 `
 
@@ -60,11 +61,11 @@ export const AccentText = styled(Text)`
 `;
 
 export const HeaderText = styled(Text)`
-  font-size: 1.25em;
+  font-size: ${fontSizes.header};
 `
 
 export const SmallText = styled(SecondaryText)`
-  font-size: 0.8125em;
+  font-size: ${fontSizes.small};
 `
 
 // Buttons

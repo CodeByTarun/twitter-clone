@@ -24,8 +24,23 @@ export const HeaderPhotoContainer = styled.div`
 export const ProfileAndEditContainer = styled.div`
     display: flex;
     position: relative;
-    background-color: red;
     justify-content: space-between;
+    align-items: flex-start;
+`
+
+export const ProfilePhotoContainer = styled.div`
+    position: relative;
+    display: flex;
+    width: 25%;
+    padding-bottom: 12.5%;
+
+    img {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 1rem;
+        height: 200%;
+        border: 5px solid ${p => p.theme.colors.background};
+    }
 `
 
 export const EditProfileButton = styled(Button)`
@@ -37,7 +52,7 @@ export const EditProfileButton = styled(Button)`
     justify-self: flex-end;
 
     :hover {
-    background-color: ${(props) => hexToRGB(props.theme.colors.border, 0.4)};
+        background-color: ${(props) => hexToRGB(props.theme.colors.border, 0.4)};
     }
 `
 

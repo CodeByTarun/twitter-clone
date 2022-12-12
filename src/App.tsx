@@ -8,6 +8,7 @@ import GlobalStyle from './Shared/globalStyles';
 import { devices } from './Shared/globalConstants';
 import { Home, Bookmarks, Profile } from './Pages';
 import { ExploreSideBar, NavigationBar } from './Components';
+import Error from './Pages/Error';
 // import { Helmet } from 'react-helmet-async';
 // import { getFirestore } from 'firebase/firestore';
 // import { getAuth } from 'firebase/auth';
@@ -34,10 +35,12 @@ const App: React.FC<{}> = () => {
       <Container>
         <NavigationBar />
         <Routes>
+          <Route index element={<Home/>}/>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/bookmarks" element={<Bookmarks />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/*" element={<Profile />}/>
+          <Route path="*" element={<Error/>} />
         </Routes>
         <ExploreSideBar />
       </Container>

@@ -4,6 +4,7 @@ import { BackArrowIcon } from '../../Shared/Icons';
 import { FixedWidthSpacer, HeaderText, IconButton, SmallText } from '../../Shared/Styled/MiscellaneousStyled';
 import { HeaderDiv, HeaderTextContainer, PageViewDiv } from '../../Shared/Styled/PageStyled';
 import SvgStyled from '../../Shared/Styled/SvgStyled';
+import ProfileBody from './ProfileBody';
 import { ProfileHeader } from './ProfileHeader';
 
 const Profile: React.FC<{}> = () => {
@@ -25,7 +26,7 @@ const Profile: React.FC<{}> = () => {
         </HeaderTextContainer>
       </HeaderDiv>
       <ProfileHeader/>
-      
+      <ProfileBody/>
     </PageViewDiv>
   );
 };

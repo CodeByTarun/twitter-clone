@@ -21,7 +21,7 @@ export const NavigationOptionDiv = styled.div`
   height: 3.25rem;
 `;
 
-export const TweetButton = styled.a`
+export const TweetButton = styled.div`
   display: block;
   background-color: ${(props) => props.theme.colors.accent};
   box-sizing: border-box;

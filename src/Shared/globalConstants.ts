@@ -5,3 +5,9 @@ export const devices = {
   desktop: `(min-width: 1284px)`,
   sidebarBreak: `(min-width: 1095px)`,
 };
+
+export const fontSizes = {
+  normal: '0.9375rem',
+  header: '1.25em',
+  small: '0.8125em',
+}

@@ -1,28 +1,31 @@
 import React from 'react'
 import { ProfilePhoto } from '../../../Shared/Components'
 import { FlexContainer, HeaderText, SecondaryText, Text } from '../../../Shared/Styled/MiscellaneousStyled'
-import { DescriptionText, EditProfileButton, FollowContainer, HeaderPhotoContainer, LocationAndLinksContainer, ProfileAndEditContainer, ProfileContainer } from './styled'
+import { DescriptionText, EditProfileButton, FollowContainer, HeaderPhotoContainer, LocationAndLinksContainer, 
+    ProfileAndEditContainer, ProfileContainer, ProfilePhotoContainer } from './styled'
 
 export const ProfileHeader: React.FC<{}> = () => {
     return (
-        <FlexContainer isVeritcal>
+        <FlexContainer isVertical={true}>
             <HeaderPhotoContainer/>
-            <ProfileContainer>
+            <ProfileContainer isVertical={true}>
                 <ProfileAndEditContainer>
-                    <ProfilePhoto/>
+                    <ProfilePhotoContainer>
+                        <ProfilePhoto photoWidth='100%'/>
+                    </ProfilePhotoContainer>
                     <EditProfileButton>
                         <Text isBold>Edit profile</Text>
                     </EditProfileButton>
                 </ProfileAndEditContainer>
                 <HeaderText isBold>CodeByTarun</HeaderText>
                 <SecondaryText>@CodeByTarun</SecondaryText>
-                <DescriptionText>Description</DescriptionText>
-                <LocationAndLinksContainer>
+                <DescriptionText>Description...</DescriptionText>
+                <LocationAndLinksContainer isVertical={false}>
                     <SecondaryText>Location</SecondaryText>
                     <SecondaryText>Links</SecondaryText>
                 </LocationAndLinksContainer>
 
-                <FollowContainer>
+                <FollowContainer isVertical={false}>
                     <SecondaryText><b>55</b> Following</SecondaryText>
                     <SecondaryText><b>0</b> Followers</SecondaryText>
                 </FollowContainer>

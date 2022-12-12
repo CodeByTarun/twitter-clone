@@ -2,19 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import ProfilePlaceholder from '../../../assets/profile-placeholder.png';
 
-const Container = styled.div<{photoWidth: string}>`
-  border-radius: 100px;
-  height: ${p => p.photoWidth};
+const ImageStyle = styled.img<{photoWidth: string}>`
   width: ${p => p.photoWidth};
-  min-height: 3rem;
-  min-width: 3rem;
-  overflow: hidden;
-
-  & img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-  }
+  height: ${p => p.photoWidth};
+  object-fit: fill;
+  border-radius: 50%;
 `;
 
 interface ProfilePhotoProps {
@@ -23,8 +15,16 @@ interface ProfilePhotoProps {
 
 export const ProfilePhoto: React.FC<ProfilePhotoProps> = ({photoWidth = '3rem'}) => {
   return (
-    <Container photoWidth={photoWidth}>
-      <img src={ProfilePlaceholder} />
-    </Container>
+    <ImageStyle photoWidth={photoWidth} src={ProfilePlaceholder} />
   );
 };
+
+// border-radius: 100px;
+//   border-width: 1px;
+//   border-style: solid;
+//   border-color: blue;
+//   width: ${p => p.photoWidth};
+//   height: ${p => p.photoWidth};
+//   min-height: 3rem;
+//   min-width: 3rem;
+//   overflow: hidden;
