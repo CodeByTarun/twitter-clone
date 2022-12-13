@@ -20,8 +20,8 @@ interface ModalWrapperProps {
 }
 
 const ModalWrapper: React.FC<ModalWrapperProps> = ({ children }) => {
+  
   const navigate = useNavigate();
-
   const goBack = useCallback(() => navigate(-1), []);
 
   return <ModalBackground onClick={goBack}>{children}</ModalBackground>;
