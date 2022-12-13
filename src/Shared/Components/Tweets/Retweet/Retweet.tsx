@@ -8,7 +8,6 @@ import { IconContainer, TweetOptionButton } from '../styled';
 const RetweetColor = '#00BA7C';
 
 export const Retweet: React.FC<{}> = () => {
-
   const theme = useTheme();
 
   return (

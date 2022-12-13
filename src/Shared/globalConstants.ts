@@ -10,4 +10,4 @@ export const fontSizes = {
   normal: '0.9375rem',
   header: '1.25em',
   small: '0.8125em',
-}
+};

@@ -1,57 +1,67 @@
-import React from 'react'
-import styled from 'styled-components'
-import { hexToRGB } from '../../../helpers/Converters'
-import { LinkStyled, Text } from '../../Styled/MiscellaneousStyled'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+import { hexToRGB } from '../../../helpers/Converters';
+import { Text } from '../../Styled/MiscellaneousStyled';
 
-const TabLink = styled(LinkStyled)<{$isActive: boolean}>`
+const BlueBottom = styled.div`
+  background-color: transparent;
+  border-radius: 100px;
+  height: 0.25rem;
+  width: 110%;
+  align-self: center;
+  position: absolute;
+  bottom: -1rem;
+`;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+`;
+
+const TabLink = styled(NavLink)`
   flex-grow: 1;
   display: flex;
   justify-content: center;
   padding: 1rem 0;
+  text-decoration: none;
 
   :hover {
-    background-color: ${p => hexToRGB(p.theme.font.primary, 0.1)};    
+    background-color: ${(p) => hexToRGB(p.theme.font.primary, 0.1)};
   }
 
   ${Text} {
-    color: ${p => p.$isActive ? p.theme.font.primary : p.theme.font.secondary};
-    font-weight: bold; 
+    color: ${(p) => p.theme.font.secondary};
+    font-weight: bold;
     text-align: center;
   }
-`
 
-const Container = styled.div`
-  display:flex;
-  flex-direction: column;
-  height: 100%;
-  position: relative;
-`
+  &.active {
+    ${Container} > ${Text} {
+      color: white;
+    }
 
-const BlueBottom = styled.div`
-  background-color: ${p => p.theme.colors.accent};
-  border-radius: 100px;
-  height: 0.25rem;
-  width: 110%;
-  align-self: center; 
-  position: absolute;
-  bottom: -1rem;
-`
+    ${Container} > ${BlueBottom} {
+      background-color: ${(p) => p.theme.colors.accent};
+    }
+  }
+`;
 
 interface Props {
-    text: string;
-    path: string;
-    isActive: boolean;
+  text: string;
+  path: string;
 }
 
-const NavigationTabButton : React.FC<Props> = ({text, path, isActive}) => {
+const NavigationTabButton: React.FC<Props> = ({ text, path }) => {
   return (
-    <TabLink to={path} $isActive={isActive}>
+    <TabLink end to={path}>
       <Container>
         <Text>{text}</Text>
-        { isActive && <BlueBottom/> }
+        <BlueBottom />
       </Container>
     </TabLink>
-  )
-}
+  );
+};
 
-export default NavigationTabButton
+export default NavigationTabButton;

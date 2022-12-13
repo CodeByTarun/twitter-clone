@@ -17,13 +17,15 @@ export const TweetBox = styled.div`
   flex-direction: column;
 `;
 
-export const TweetInput = styled.textarea<{hasText?: boolean}>`
+export const TweetInput = styled.textarea<{ hasText?: boolean }>`
   border-width: 0;
   resize: none;
   padding-bottom: 0.5rem;
   background-color: transparent;
   color: ${(props) => props.theme.font.primary};
-  ${p =>  (p.hasText ?? false) && `border-bottom: 1px solid ${p.theme.colors.border}`};
+  ${(p) =>
+    (p.hasText ?? false) &&
+    `border-bottom: 1px solid ${p.theme.colors.border}`};
   font: inherit;
   font-size: 1.25em;
   margin-left: 1rem;

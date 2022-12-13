@@ -39,10 +39,9 @@ export const HeaderTextContainer = styled.div`
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-  };
+  }
 
   ${HeaderText} {
     padding-bottom: 0.2rem;
-  };
-`
-
+  } ;
+`;

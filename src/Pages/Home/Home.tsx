@@ -2,15 +2,15 @@ import React from 'react';
 import { useTheme } from 'styled-components';
 import { ComposeTweet, Tweet } from '../../Shared/Components';
 import { TopTweetsIcon } from '../../Shared/Icons';
-import { HeaderText, IconButton, Spacer } from '../../Shared/Styled/MiscellaneousStyled';
 import {
-  HeaderDiv,
-  PageViewDiv,
-} from '../../Shared/Styled/PageStyled';
+  HeaderText,
+  IconButton,
+  Spacer,
+} from '../../Shared/Styled/MiscellaneousStyled';
+import { HeaderDiv, PageViewDiv } from '../../Shared/Styled/PageStyled';
 import SvgStyled from '../../Shared/Styled/SvgStyled';
 
 const Home: React.FC<{}> = () => {
-
   const theme = useTheme();
 
   return (

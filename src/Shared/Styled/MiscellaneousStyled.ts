@@ -22,54 +22,57 @@ export const Spacer = styled.div`
   flex: 1;
 `;
 
-export const FixedWidthSpacer = styled.div<{width: string}>`
+export const FixedWidthSpacer = styled.div<{ width: string }>`
   height: 100%;
-  width: ${p => p.width};
+  width: ${(p) => p.width};
 `;
 
 export const LinkStyled = styled(Link)`
   text-decoration: none;
 `;
 
-export const FlexContainer = styled.div<{isVertical: boolean}>`
+export const FlexContainer = styled.div<{ isVertical: boolean }>`
   display: flex;
-  ${p => (p.isVertical) ? 'flex-direction: column;' : 'flex-direction: row;'};
-`
+  ${(p) => (p.isVertical ? 'flex-direction: column;' : 'flex-direction: row;')};
+`;
 
 // FONTS
-// font sizes: 
+// font sizes:
 // normal: 15px DONE
 // header: 20px DONE
 // small text: 13px DONE
 // THESE ARE COMPONENT SPECIFIC:
 // tweet button: 17px
-// follow button: 14px 
+// follow button: 14px
 
-export const Text = styled.span<{isBold? : boolean}>`
+export const Text = styled.span<{ isBold?: boolean }>`
   color: ${(props) => props.theme.font.primary};
-  ${p => (p.isBold != null) ? 'font-weight: bold' : 'font-weight: normal'};
+  ${(p) => (p.isBold != null ? 'font-weight: bold' : 'font-weight: normal')};
   font-size: ${fontSizes.normal};
   line-height: 1.15rem;
-`
+`;
 
 export const SecondaryText = styled(Text)`
   color: ${(props) => props.theme.font.secondary};
-`
+`;
 
 export const AccentText = styled(Text)`
-  color: ${p => p.theme.colors.accent};
+  color: ${(p) => p.theme.colors.accent};
 `;
 
 export const HeaderText = styled(Text)`
   font-size: ${fontSizes.header};
-`
+`;
 
 export const SmallText = styled(SecondaryText)`
   font-size: ${fontSizes.small};
-`
+`;
 
 // Buttons
-export const IconButton = styled.button<{ hoverColor: string, padding?: string }>`
+export const IconButton = styled.button<{
+  hoverColor: string;
+  padding?: string;
+}>`
   display: flex;
   align-items: center;
   background-color: transparent;
@@ -77,12 +80,12 @@ export const IconButton = styled.button<{ hoverColor: string, padding?: string }
   border-style: none;
   border-radius: 100px;
   height: 100%;
-  padding: ${(p) => (p.padding != null) ? p.padding : '0'};
+  padding: ${(p) => (p.padding != null ? p.padding : '0')};
 
   :hover {
     background-color: ${(props) => hexToRGB(props.hoverColor, 0.1)};
   }
-`
+`;
 
 export const Button = styled.button`
   min-width: 80px;
@@ -90,4 +93,4 @@ export const Button = styled.button`
   border-radius: 100px;
   font: inherit;
   font-weight: bold;
-`
+`;

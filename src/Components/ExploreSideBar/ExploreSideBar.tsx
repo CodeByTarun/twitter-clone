@@ -10,24 +10,23 @@ import { ExploreSideBarDiv, SearchBar, SearchInput } from './styled';
 import UserFollowCard from './UserFollowCard';
 
 const ExploreSideBar: React.FC<{}> = () => {
-
   const theme = useTheme();
   const isLaptop = useMediaQuery({ query: devices.laptop });
 
   if (!isLaptop) return null;
 
   return (
-      <ExploreSideBarDiv>
-        <SearchBar>
-          <SvgStyled color={theme.font.secondary}>
-            <SearchIcon/>
-          </SvgStyled>
-          <SearchInput type={'text'} placeholder="Search Twitter"/>
-        </SearchBar>
-        <DiscoverCard/>
-        <UserFollowCard/>
-        <AboutSection/>
-        </ExploreSideBarDiv>
+    <ExploreSideBarDiv>
+      <SearchBar>
+        <SvgStyled color={theme.font.secondary}>
+          <SearchIcon />
+        </SvgStyled>
+        <SearchInput type={'text'} placeholder="Search Twitter" />
+      </SearchBar>
+      <DiscoverCard />
+      <UserFollowCard />
+      <AboutSection />
+    </ExploreSideBarDiv>
   );
 };
 

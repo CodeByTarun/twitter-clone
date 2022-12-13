@@ -3,29 +3,49 @@ import { useMediaQuery } from 'react-responsive';
 import { NavigationDiv, TweetButton } from './styled';
 import {
   BookmarksIcon,
+  BookmarksIconActive,
   CreateTweetIcon,
   ExploreIcon,
   HomeIcon,
+  HomeIconActive,
   ListsIcon,
   MessagesIcon,
+  MessagesIconActive,
   NotificationIcon,
   ProfileIcon,
+  ProfileIconActive,
   SearchIcon,
   ThemeIcon,
   TwitterIcon,
 } from '../../Shared/Icons';
-import { useTheme } from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import NavigationButton from './NavigationButton';
 import { devices } from '../../Shared/globalConstants';
 import SvgStyled from '../../Shared/Styled/SvgStyled';
 import ProfileButton from './ProfileButton/ProfileButton';
-import { LinkStyled, Spacer } from '../../Shared/Styled/MiscellaneousStyled';
+import {
+  HeaderText,
+  LinkStyled,
+  Spacer,
+} from '../../Shared/Styled/MiscellaneousStyled';
+import { NavLink, useLocation } from 'react-router-dom';
+
+const NavigationLink = styled(NavLink)`
+  text-decoration: none;
+
+  &.active {
+    ${HeaderText} {
+      font-weight: bold;
+    }
+  }
+`;
 
 const NavigationBar: React.FC<{}> = () => {
   const theme = useTheme();
+  const location = useLocation();
 
   const isDesktop = useMediaQuery({ query: devices.desktop });
-  const isLaptop = useMediaQuery({ query: devices.laptop});
+  const isLaptop = useMediaQuery({ query: devices.laptop });
 
   return (
     <NavigationDiv>
@@ -38,14 +58,16 @@ const NavigationBar: React.FC<{}> = () => {
           padding={'0.7rem'}
         />
       </LinkStyled>
-      <LinkStyled to={'/home'}>
-        <NavigationButton
-          text={'Home'}
-          icon={<HomeIcon />}
-          hoverColor={theme.font.primary}
-          iconColor={theme.font.primary}
-        />
-      </LinkStyled>
+      <NavigationLink to={'/home'}>
+        {({ isActive }) => (
+          <NavigationButton
+            text={'Home'}
+            icon={isActive ? <HomeIconActive /> : <HomeIcon />}
+            hoverColor={theme.font.primary}
+            iconColor={theme.font.primary}
+          />
+        )}
+      </NavigationLink>
       <NavigationButton
         text={'Explore'}
         icon={isLaptop ? <ExploreIcon /> : <SearchIcon />}
@@ -58,39 +80,43 @@ const NavigationBar: React.FC<{}> = () => {
         hoverColor={theme.font.primary}
         iconColor={theme.font.primary}
       />
-      <LinkStyled to={'/messages'}>
-        <NavigationButton
-          text={'Messages'}
-          icon={<MessagesIcon />}
-          hoverColor={theme.font.primary}
-          iconColor={theme.font.primary}
-        />
-      </LinkStyled>
-      <LinkStyled to={'/bookmarks'}>
-        <NavigationButton
-          text={'Bookmarks'}
-          icon={<BookmarksIcon />}
-          hoverColor={theme.font.primary}
-          iconColor={theme.font.primary}
-        />
-      </LinkStyled>
-      <LinkStyled to={'/lists'}>
-        <NavigationButton
-          text={'Lists'}
-          icon={<ListsIcon />}
-          hoverColor={theme.font.primary}
-          iconColor={theme.font.primary}
-        />
-      </LinkStyled>
-      <LinkStyled to={'/profile'}>
-        <NavigationButton
-          text={'Profile'}
-          icon={<ProfileIcon />}
-          hoverColor={theme.font.primary}
-          iconColor={theme.font.primary}
-        />
-      </LinkStyled>
-      <LinkStyled to={'/theme'}>
+      <NavigationLink to={'/messages'}>
+        {({ isActive }) => (
+          <NavigationButton
+            text={'Messages'}
+            icon={isActive ? <MessagesIconActive /> : <MessagesIcon />}
+            hoverColor={theme.font.primary}
+            iconColor={theme.font.primary}
+          />
+        )}
+      </NavigationLink>
+      <NavigationLink to={'/bookmarks'}>
+        {({ isActive }) => (
+          <NavigationButton
+            text={'Bookmarks'}
+            icon={isActive ? <BookmarksIconActive /> : <BookmarksIcon />}
+            hoverColor={theme.font.primary}
+            iconColor={theme.font.primary}
+          />
+        )}
+      </NavigationLink>
+      <NavigationButton
+        text={'Lists'}
+        icon={<ListsIcon />}
+        hoverColor={theme.font.primary}
+        iconColor={theme.font.primary}
+      />
+      <NavigationLink to={'/profile'}>
+        {({ isActive }) => (
+          <NavigationButton
+            text={'Profile'}
+            icon={isActive ? <ProfileIconActive /> : <ProfileIcon />}
+            hoverColor={theme.font.primary}
+            iconColor={theme.font.primary}
+          />
+        )}
+      </NavigationLink>
+      <LinkStyled to={'/theme'} state={{ background: location }}>
         <NavigationButton
           text={'Theme'}
           icon={<ThemeIcon />}
@@ -98,7 +124,7 @@ const NavigationBar: React.FC<{}> = () => {
           iconColor={theme.font.primary}
         />
       </LinkStyled>
-      <LinkStyled to={'/compose/tweet'}>
+      <LinkStyled to={'/compose/tweet'} state={{ background: location }}>
         <TweetButton>
           {isDesktop ? (
             'Tweet'

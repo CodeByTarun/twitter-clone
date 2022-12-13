@@ -5,7 +5,6 @@ import SvgStyled from '../../../Styled/SvgStyled';
 import { IconContainer, TweetOptionButton } from '../styled';
 
 export const Share: React.FC<{}> = () => {
-
   const theme = useTheme();
 
   return (

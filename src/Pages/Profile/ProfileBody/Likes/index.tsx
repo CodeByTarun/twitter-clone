@@ -1,10 +1,8 @@
-import React from 'react'
-import { Container } from '../styled'
+import React from 'react';
+import { Container } from '../styled';
 
-const Likes : React.FC<{}> = () => {
-  return (
-    <Container>Likes</Container>
-  )
-}
+const Likes: React.FC<{}> = () => {
+  return <Container>Likes</Container>;
+};
 
-export default Likes
+export default Likes;

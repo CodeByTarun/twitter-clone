@@ -8,7 +8,6 @@ import { IconContainer, TweetOptionButton } from '../styled';
 const LikeColor = '#F91880';
 
 export const Like: React.FC<{}> = () => {
-
   const theme = useTheme();
 
   return (

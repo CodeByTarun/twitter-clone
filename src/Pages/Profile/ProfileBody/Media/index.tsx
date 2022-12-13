@@ -1,10 +1,8 @@
-import React from 'react'
-import { Container } from '../styled'
+import React from 'react';
+import { Container } from '../styled';
 
-const Media : React.FC<{}> = () => {
-  return (
-    <Container>Media</Container>
-  )
-}
+const Media: React.FC<{}> = () => {
+  return <Container>Media</Container>;
+};
 
-export default Media
+export default Media;

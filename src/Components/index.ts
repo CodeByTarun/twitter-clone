@@ -1,5 +1,5 @@
-import ExploreSideBar from "./ExploreSideBar";
-import NavigationBar from "./NavigationBar";
-import NavigationTabButton from "../Shared/Components/NavigationTabButton";
+import ExploreSideBar from './ExploreSideBar';
+import NavigationBar from './NavigationBar';
+import NavigationTabButton from '../Shared/Components/NavigationTabButton';
 
-export { ExploreSideBar, NavigationBar, NavigationTabButton }
+export { ExploreSideBar, NavigationBar, NavigationTabButton };

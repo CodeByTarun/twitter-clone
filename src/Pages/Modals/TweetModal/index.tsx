@@ -1,11 +1,11 @@
 import React from 'react';
-import { PageViewDiv } from '../../../Shared/Styled/PageStyled';
+import ModalWrapper from '../ModalWrapper';
 
 const TwitterModal: React.FC<{}> = () => {
   return (
-    <PageViewDiv>
+    <ModalWrapper>
       <p>hdefasdfsf</p>
-    </PageViewDiv>
+    </ModalWrapper>
   );
 };
 

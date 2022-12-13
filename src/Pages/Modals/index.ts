@@ -1,3 +1,3 @@
-import TweetModal from "./TweetModal";
+import TweetModal from './TweetModal';
 
-export {TweetModal}
+export { TweetModal };

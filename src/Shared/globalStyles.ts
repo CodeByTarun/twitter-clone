@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-import TwitterChirp from "../assets/fonts/chirp-regular-web.woff";
-import TwitterChirpBold from "../assets/fonts/chirp-bold-web.woff";
-import TwitterChirpHeavy from "../assets/fonts/chirp-heavy-web.woff";
+import TwitterChirp from '../assets/fonts/chirp-regular-web.woff';
+import TwitterChirpBold from '../assets/fonts/chirp-bold-web.woff';
+import TwitterChirpHeavy from '../assets/fonts/chirp-heavy-web.woff';
 
 const GlobalStyle = createGlobalStyle`
 

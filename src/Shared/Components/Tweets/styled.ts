@@ -55,10 +55,10 @@ export const TweetOptionButton = styled.a<{ hoverColor: string }>`
 
   :hover {
     & ${SecondaryText} {
-      color: ${(props) => props.hoverColor}
+      color: ${(props) => props.hoverColor};
     }
   }
-  
+
   & ${SecondaryText} {
     padding-left: 0.4rem;
   }
@@ -74,13 +74,12 @@ export const TweetOptions = styled.div`
     flex: 1;
   }
 
-   & ${TweetOptionButton}:nth-child(4) {
+  & ${TweetOptionButton}:nth-child(4) {
     flex: 0;
   }
 `;
 
-
-export const IconContainer = styled.div<{hoverColor: string}>`
+export const IconContainer = styled.div<{ hoverColor: string }>`
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -96,4 +95,4 @@ export const IconContainer = styled.div<{hoverColor: string}>`
       fill: ${(props) => props.hoverColor} !important;
     }
   }
-`
+`;
