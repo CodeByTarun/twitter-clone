@@ -3,7 +3,9 @@ import React from 'react';
 import { ProfileButtonStyled } from '../styled';
 
 const ProfileButton: React.FC<{}> = () => {
-  // const theme = useTheme();
+  
+  // TODO: logout fn
+  // const logout = async () => {};
 
   return (
     <ProfileButtonStyled>
