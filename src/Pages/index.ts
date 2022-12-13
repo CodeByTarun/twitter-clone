@@ -1,6 +1,8 @@
 import Bookmarks from "./Bookmarks";
+import Follow from "./Follow";
 import Home from "./Home";
 import Profile from "./Profile";
-import TweetModal from "./TweetModal";
+import Error from "./Error";
+import { TweetModal } from "./Modals";
 
-export { Home, Bookmarks, Profile, TweetModal }
+export { Home, Bookmarks, Profile, Follow, Error, TweetModal }

@@ -1,8 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 import { ProfilePhoto } from '../../../Shared/Components'
-import { FlexContainer, HeaderText, SecondaryText, Text } from '../../../Shared/Styled/MiscellaneousStyled'
+import { FlexContainer, HeaderText, LinkStyled, SecondaryText, Text } from '../../../Shared/Styled/MiscellaneousStyled'
 import { DescriptionText, EditProfileButton, FollowContainer, HeaderPhotoContainer, LocationAndLinksContainer, 
     ProfileAndEditContainer, ProfileContainer, ProfilePhotoContainer } from './styled'
+
+const FollowLink = styled(LinkStyled)`
+    :hover {
+        ${SecondaryText} {
+            text-decoration: underline;
+            text-decoration-color: ${p => p.theme.font.primary};
+        }
+    }
+`
+
 
 export const ProfileHeader: React.FC<{}> = () => {
     return (
@@ -26,8 +37,12 @@ export const ProfileHeader: React.FC<{}> = () => {
                 </LocationAndLinksContainer>
 
                 <FollowContainer isVertical={false}>
-                    <SecondaryText><b>55</b> Following</SecondaryText>
-                    <SecondaryText><b>0</b> Followers</SecondaryText>
+                    <FollowLink to={'following'}>
+                        <SecondaryText><b>55</b> Following</SecondaryText>
+                    </FollowLink>
+                    <FollowLink to={'followers'}>
+                        <SecondaryText><b>0</b> Followers</SecondaryText>
+                    </FollowLink>
                 </FollowContainer>
             </ProfileContainer>
         </FlexContainer>

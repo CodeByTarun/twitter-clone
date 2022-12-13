@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { hexToRGB } from '../../helpers/Converters'
-import { LinkStyled, Text } from '../../Shared/Styled/MiscellaneousStyled'
+import { hexToRGB } from '../../../helpers/Converters'
+import { LinkStyled, Text } from '../../Styled/MiscellaneousStyled'
 
 const TabLink = styled(LinkStyled)<{$isActive: boolean}>`
   flex-grow: 1;

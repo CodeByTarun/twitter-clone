@@ -6,9 +6,8 @@ import { darkTheme } from './Shared/theme';
 import { Route, Routes } from 'react-router-dom';
 import GlobalStyle from './Shared/globalStyles';
 import { devices } from './Shared/globalConstants';
-import { Home, Bookmarks, Profile } from './Pages';
+import { Home, Bookmarks, Profile, Follow, Error } from './Pages';
 import { ExploreSideBar, NavigationBar } from './Components';
-import Error from './Pages/Error';
 // import { Helmet } from 'react-helmet-async';
 // import { getFirestore } from 'firebase/firestore';
 // import { getAuth } from 'firebase/auth';
@@ -41,6 +40,8 @@ const App: React.FC<{}> = () => {
           <Route path="/bookmarks" element={<Bookmarks />} />
           <Route path="/profile/*" element={<Profile />}/>
           <Route path="*" element={<Error/>} />
+          <Route path="/profile/following" element={<Follow/>}/>
+          <Route path="/profile/followers" element={<Follow/>}/>
         </Routes>
         <ExploreSideBar />
       </Container>

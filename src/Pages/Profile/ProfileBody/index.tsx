@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import NavigationTabButton from '../../../Components/NavigationTabButton'
+import NavigationTabButton from '../../../Shared/Components/NavigationTabButton'
 import { FlexContainer } from '../../../Shared/Styled/MiscellaneousStyled'
 import Likes from './Likes'
 import Media from './Media'
