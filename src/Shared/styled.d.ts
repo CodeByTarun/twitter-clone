@@ -18,6 +18,7 @@ declare module 'styled-components' {
       reply: string;
       cardHover: string;
       navigationHover: string;
+      modalBackground: string;
     };
   }
 }

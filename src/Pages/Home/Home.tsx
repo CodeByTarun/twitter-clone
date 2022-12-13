@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme } from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { ComposeTweet, Tweet } from '../../Shared/Components';
 import { TopTweetsIcon } from '../../Shared/Icons';
 import {
@@ -9,6 +9,10 @@ import {
 } from '../../Shared/Styled/MiscellaneousStyled';
 import { HeaderDiv, PageViewDiv } from '../../Shared/Styled/PageStyled';
 import SvgStyled from '../../Shared/Styled/SvgStyled';
+
+const ComposeTweetContainer = styled.div`
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+`
 
 const Home: React.FC<{}> = () => {
   const theme = useTheme();
@@ -24,7 +28,9 @@ const Home: React.FC<{}> = () => {
           </SvgStyled>
         </IconButton>
       </HeaderDiv>
-      <ComposeTweet />
+      <ComposeTweetContainer>
+        <ComposeTweet />
+      </ComposeTweetContainer>
       {/* Feed */}
       <Tweet />
       <Tweet />

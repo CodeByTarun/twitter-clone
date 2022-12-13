@@ -15,6 +15,7 @@ const lightTheme: DefaultTheme = {
     reply: '#CFD9DE',
     cardHover: '#EFF1F1',
     navigationHover: '#E6E7E7',
+    modalBackground: '#000000',
   },
   borderRadius: '15px',
 };
@@ -34,11 +35,13 @@ const darkTheme: DefaultTheme = {
     reply: '#333639',
     cardHover: '#1D1F23',
     navigationHover: '#181818',
+    modalBackground: '#5b7083',
   },
   borderRadius: '15px',
 };
 
 export { lightTheme, darkTheme };
+
 
 // TODO: need to consider these colors
 // replies and share hover : #1D9BF0 (text)

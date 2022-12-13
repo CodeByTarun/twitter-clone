@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding: 0.75rem 1rem;
   display: flex;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  width: 100%;
+  height: 100%;
 `;
 
 export const ProfileContainer = styled.div`
@@ -29,7 +30,8 @@ export const TweetInput = styled.textarea<{ hasText?: boolean }>`
   font: inherit;
   font-size: 1.25em;
   margin-left: 1rem;
-
+  flex: 1;
+    
   :focus {
     outline: 0;
     border-bottom: 1px solid ${(props) => props.theme.colors.border};
